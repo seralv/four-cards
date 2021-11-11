@@ -1,0 +1,62 @@
+@for $i from 1 through 4 {
+  .card-#{$i} {
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.15);
+    text-align: left;
+    padding: 25px;
+    @include respond-to('large') {
+        // width: 300px;
+        // margin: 0 auto;
+        
+    }
+    @if card-#{$i} == 'card-1' {
+        border-top: 4px solid $cyan;
+        @include respond-to('large') {
+            // position: absolute;
+            // top: 400px;
+            grid-row: 2/4;
+        }
+    }
+    @if card-#{$i} == 'card-2' {
+        border-top: 4px solid $red;
+        @include respond-to('large') {
+            // position: absolute;
+            // left: 362px;
+            grid-row: 1/3;
+            grid-column: 2/3;
+        }
+    }
+    @if card-#{$i} == 'card-3' {
+        border-top: 4px solid $orange;
+        @include respond-to('large') {
+            // position: absolute;
+            // top: 550px;
+            // left: 362px;
+            grid-row: 3/5;
+        }
+    }
+    @if card-#{$i} == 'card-4' {
+        border-top: 4px solid $blue;
+        @include respond-to('large') {
+            // position: absolute;
+            // top: 400px;
+            // right: 30px;
+            grid-row: 2/4;
+            grid-column: 3/4;
+        }
+    }
+    h3 {
+      color: $very-dark-blue;  
+      margin-top: 0;
+    }
+    p {
+        font-size: 13px;
+        margin-bottom: 40px;
+        width: 100%;
+        text-align: left;
+    }
+    .image {
+        text-align: right;
+    }
+  }
+}

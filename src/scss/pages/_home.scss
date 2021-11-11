@@ -1,0 +1,41 @@
+main {
+    max-width: $max-width;
+    text-align: center;
+    margin: 70px 30px;
+    @include respond-to('large') {
+        margin: 70px auto;
+    }
+    .subtitle {
+        font-size: 23px;
+        font-weight: 200;
+        color: $gray-fish-blue;
+    }
+    .title {
+        font-size: 23px;
+        font-weight: 600;
+        color: $very-dark-blue;
+    }
+    p {
+        color: $gray-fish-blue;
+        margin-bottom: 70px;
+        @include respond-to('large') {
+            width: 500px;
+            margin: 20px auto;
+        }
+    }
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        @include respond-to('large') {
+            // background-color: yellow;
+            // margin: 60px auto;
+            margin: 3.5rem 5rem;
+            display: grid;
+            grid-template-columns: repeat(1fr 1fr 1fr);
+            grid-template-rows: repeat(4,125px);
+            row-gap: 2.5rem;
+            column-gap: 1.5rem;
+        }
+    }
+}
